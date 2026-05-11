@@ -163,7 +163,7 @@ The `Renderer` module composites sprites against the pitch background to prevent
 
 ### Audio System
 
-Three sound effects are stored as raw sample arrays and played through a 5-bit R2R DAC at 11 kHz via SysTick:
+Three sound effects are stored as raw sample arrays and played through a 5-bit Binary Weighted DAC at 11 kHz via SysTick:
 
 | Sound | Samples | Trigger |
 |---|---|---|
