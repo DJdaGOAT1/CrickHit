@@ -85,7 +85,7 @@ A 1500ms cooldown is enforced between swings to prevent spam.
 | LCD Reset | PB15 | ST7735 !RST |
 | LCD D/C | PA13 | ST7735 RS (Data/Command) |
 | Slide Pot | PB18 (ADC1 Ch5) | Batsman horizontal position |
-| 5-bit DAC | PB0-PB4 | R2R ladder audio output |
+| 5-bit DAC | PB0-PB4 | Binary-weighted audio output |
 | Speaker Enable | PB12 | Active-low speaker control |
 | TOP Switch | PA24 | Increase ball speed |
 | LEFT Switch | PA25 | Left bat swing |
@@ -100,13 +100,13 @@ A 1500ms cooldown is enforced between swings to prevent spam.
 - ST7735R 128x160 TFT LCD
 - Slide potentiometer
 - 4 momentary push switches
-- 5-bit R2R DAC resistor ladder
+- 5-bit binary-weighted DAC
 - Speaker with enable circuit
 - 3 LEDs with current-limiting resistors
 
 ### Custom PCB
 
-We designed a custom PCB in KiCad that consolidates all of the hardware circuitry onto a single board. The PCB integrates the ST7735R LCD connector, the 5-bit R2R DAC ladder, the speaker amplifier circuit (MCP34119P), all four game switches, the slide potentiometer input, LED indicators, IR receiver (TSOP31438), a ULN2003B Darlington driver, UART debugging header, and TExaS connector -- all routed to the MSPM0G3507 LaunchPad. This eliminates the need for breadboard wiring and makes the entire system compact and reliable.
+We designed a custom PCB in KiCad that consolidates all of the hardware circuitry onto a single board. The PCB integrates the ST7735R LCD connector, the 5-bit binary-weighted DAC, the speaker amplifier circuit (MCP34119P), all four game switches, the slide potentiometer input, LED indicators, IR receiver (TSOP31438), a ULN2003B Darlington driver, UART debugging header, and TExaS connector -- all routed to the MSPM0G3507 LaunchPad. This eliminates the need for breadboard wiring and makes the entire system compact and reliable.
 
 ### 3D-Printed Enclosure
 
@@ -280,8 +280,6 @@ The `inc/` directory contains the hardware abstraction libraries that originally
 **`curve.py`** -- Python script that simulates ball trajectories with the same kinematic equations used in the game. Plots predicted paths for tuning physics constants (velocity, acceleration, target variance) without reflashing the board.
 
 **`flood_fill_sprites.py`** -- Post-processes `images.h` after BMP-to-C conversion. Flood-fills exterior background pixels with the transparent color (`0x9772`) while preserving interior white pixels (bat highlights, ball shine, etc.) that should not be treated as transparent during compositing.
-
-**`BmpConvert16.exe`** -- Converts BMP images to 16-bit RGB565 C arrays for inclusion in `images.h`.
 
 ---
 
