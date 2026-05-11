@@ -17,7 +17,7 @@ Developed as the final project for **ECE 319H: Introduction to Embedded Systems 
 
 A top-down cricket scene is rendered on the LCD. A bowler at the top of the screen delivers balls toward the stumps at the bottom. The player moves the batsman horizontally with a slide potentiometer and triggers left or right bat swings using physical switches.
 
-A demo of CrickHit is available here:
+A demo of CrickHit is available [here](https://youtu.be/25Vt4UJRmN4):
 
 [![Video Thumbnail Title](https://img.youtube.com/vi/25Vt4UJRmN4/0.jpg)](https://www.youtube.com/watch?v=25Vt4UJRmN4)
 
