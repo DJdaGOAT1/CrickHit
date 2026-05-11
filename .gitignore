@@ -1,0 +1,18 @@
+# CCS Build artifacts
+Debug/
+Release/
+.launches/
+
+# IDE metadata (optional -- uncomment if you want to track these)
+# .project
+# .cproject
+# .clangd
+# .settings/
+
+# OS files
+Thumbs.db
+.DS_Store
+
+# Python
+__pycache__/
+*.pyc
