@@ -13,9 +13,13 @@ Developed as the final project for **ECE 319H: Introduction to Embedded Systems 
 
 ---
 
-## Gameplay
+## Gameplay / Demo
 
 A top-down cricket scene is rendered on the LCD. A bowler at the top of the screen delivers balls toward the stumps at the bottom. The player moves the batsman horizontally with a slide potentiometer and triggers left or right bat swings using physical switches.
+
+A demo of CrickHit is available here:
+
+[![Video Thumbnail Title](https://img.youtube.com/vi/25Vt4UJRmN4/0.jpg)](https://www.youtube.com/watch?v=25Vt4UJRmN4)
 
 ### Scoring
 
@@ -106,18 +110,13 @@ We designed a custom PCB in KiCad that consolidates all of the hardware circuitr
 
 ### 3D-Printed Enclosure
 
-A custom controller-style enclosure was designed in **Autodesk Fusion** to house the PCB and LaunchPad together as a handheld game controller. The enclosure consists of multiple printed parts:
+A custom controller-style enclosure was designed in **Autodesk Fusion** to house the PCB and LaunchPad together as a handheld game controller.
 
-| Part | Description |
-|---|---|
-| Base Controller | Main body that holds the PCB and LaunchPad |
-| Top Cover | Lid with cutouts for the LCD and controls (HiLetGo LCD variant also included) |
-| Casing | Outer shell |
-| Handle | Ergonomic grip section |
-| Buttons | 3D-printed button caps that sit over the PCB switches |
-| Button Long | Extended button variant |
+<img width="1034" height="962" alt="image" src="https://github.com/user-attachments/assets/83a503fe-3180-4c53-a3db-e5da69381417" />
+<img width="1121" height="964" alt="image" src="https://github.com/user-attachments/assets/c0f87085-8c87-4414-a10d-ed331baa99fb" />
 
-All Fusion design files (`.f3d`) are included in the `3D_Enclosure/` directory and can be exported to STL for printing.
+
+An STL of the enclosure is included in the `3D_Enclosure/`
 
 ---
 
@@ -242,13 +241,8 @@ CrickHit/
 |   |-- utece.kicad_sym            Custom symbol library
 |   +-- logo.bmp                   Board silkscreen logo
 |
-|-- 3D_Enclosure/                  Autodesk Fusion design files for the controller enclosure
-|   |-- Base Controller.f3d
-|   |-- Top Cover.f3d
-|   |-- Casing.f3d
-|   |-- Handle.f3d
-|   |-- Buttons.f3d
-|   +-- PCB.f3d
+|-- 3D_Enclosure/                  STL file for the controller enclosure
+|   +-- Enclosure.stl
 |
 |-- tools/                         Development utilities
 |   |-- curve.py                   Ball trajectory simulation for tuning physics
@@ -293,7 +287,7 @@ The `inc/` directory contains the hardware abstraction libraries that originally
 
 ## Acknowledgments
 
-This project was built for **ECE 319H: Introduction to Embedded Systems (Honors)** at **The University of Texas at Austin**, taught by **Professor Jonathan W. Valvano**.
+This project was built for **ECE 319H: Introduction to Embedded Systems (Honors)** at **The University of Texas at Austin**, taught by **Professor Ramesh Yerraballi**. Thank you to Dr. Yerraballi, Dr. Valvano, Dr. Chin, Dr. Holt, and the ECE319 TAs for their instruction and support throughout ECE319H!
 
 The hardware abstraction libraries in the `inc/` directory -- Clock, DAC5, LaunchPad, SPI, ST7735, SlidePot, TExaS, and Timer -- were written by **Jonathan Valvano** as part of the [MSPM0 ValvanoWare](http://users.ece.utexas.edu/~valvano/) curriculum framework. These drivers provide the foundational embedded systems infrastructure (clock configuration, SPI communication, LCD rendering, ADC interfacing, timer management) that CrickHit is built on.
 
