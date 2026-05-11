@@ -5,7 +5,7 @@
 
 ## Project Overview
 
-CrickHit is a real-time cricket batting game built from scratch on the **TI MSPM0G3507 LaunchPad** with a **ST7735R 128x160 TFT LCD**. The player controls a batsman using a slide potentiometer and physical switches to hit balls bowled with realistic curve trajectories. The game runs entirely on bare-metal interrupts with no RTOS, using fixed-point physics, sprite compositing, a custom 5-bit R2R DAC for audio, and multilingual UI support.
+CrickHit is a real-time cricket batting game built from scratch on the **TI MSPM0G3507 LaunchPad** with a **ST7735R 128x160 TFT LCD**. The player controls a batsman using a slide potentiometer and physical switches to hit balls bowled with realistic curve trajectories. The game runs entirely on bare-metal interrupts with no RTOS, using fixed-point physics, sprite compositing, a custom 5-bit binary-weighted DAC for audio, and multilingual UI support.
 
 Developed as the final project for **ECE 319H: Introduction to Embedded Systems (Honors)** at **The University of Texas at Austin**, Spring 2026.
 
