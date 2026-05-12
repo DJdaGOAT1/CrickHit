@@ -293,7 +293,7 @@ The hardware abstraction libraries in the `inc/` directory -- Clock, DAC5, Launc
 
 ## Authors
 
-**Devansh Joshi** -- [GitHub](https://github.com/DJdaGOAT1)  
+**Devansh Joshi** -- [GitHub](https://github.com/devanshjoshi08)  
 **Calum Cheah** -- [GitHub](https://github.com/CalumCheah)
 
 ---
